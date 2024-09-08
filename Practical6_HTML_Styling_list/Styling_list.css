@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Events</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        ol {
+            line-height: 1.8;
+            padding-left: 0;
+            margin: 0 auto;
+            max-width: 600px;
+        }
+        ol li {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 10px 0;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        ol li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        ol li::marker {
+            color: #007bff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Upcoming College Events</h1>
+    <ol>
+        <li>Freshman Orientation - September 5, 2024</li>
+        <li>Homecoming Week - October 10-15, 2024</li>
+        <li>Career Fair - November 8, 2024</li>
+        <li>Thanksgiving Break - November 27-29, 2024</li>
+        <li>Spring Semester Start - January 15, 2025</li>
+    </ol>
+</body>
+</html>

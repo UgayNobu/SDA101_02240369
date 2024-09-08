@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Room Maintenance</title>
+    <link rel="stylesheet" href="Color.css">
+</head>
+<body>
+    <center><h1>Hostel Room Maintenance Form</h1></center>
+    <form action="request">
+        <label for="name" id="room" class="credits">Name: </label>
+        <input type="text" required placeholder="" class="input"> <br><br>
+
+        <label for="room_no" class="credits">Room No: </label>
+        <select name="room" id="number" class="input">
+            <option value="rooms">H1A</option>
+            <option value="rooms">H2A</option>
+            <option value="rooms">H3A</option>  
+            <option value="rooms">H4A</option>
+            <option value="rooms">H5A</option>
+            <option value="rooms">H6A</option>
+            <option value="rooms">H7A</option>
+            <option value="rooms">H8A</option>
+            <option value="rooms">H9A</option>
+            <option value="rooms">H10A</option>
+            <option value="rooms">H11A</option>
+        </select><br><br>
+
+        <label for="issue" class="credits">Type of Issue: </label>
+        <input type="text" placeholder="" class="input"><br><br>
+
+        <label for="description" class="credits">Description: </label>
+        <input type="text" placeholder="" class="input"><br><br>
+
+        <label for="urgency" class="credits">Urgency: </label>
+        <select name="urgent" id="issues" required class="input">
+            <option value="immediate">Immediate</option>
+            <option value="medium">Medium</option>
+            <option value="low">Low</option>
+        </select><br><br>
+
+        <button class="submit">Submit</button>
+
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,13 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+ul, ol {
+    margin-bottom: 20px;
+}
+h2 {
+    color: #333;
+}
+.nested-list {
+    margin-left: 20px;
+}

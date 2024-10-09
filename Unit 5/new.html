@@ -1,0 +1,100 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shadcn + TailwindCSS Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shadcn/ui@latest/dist/styles.css">
+  <style>
+    /* Add custom styles here */
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+  <!-- Main Layout -->
+  <div class="flex min-h-screen">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-white border-r border-gray-200">
+      <div class="p-4">
+        <h2 class="text-2xl font-bold text-gray-700">Dashboard</h2>
+        <nav class="mt-8 space-y-4">
+          <a href="#" class="block py-2 px-4 text-gray-600 hover:bg-gray-100 rounded-md">
+            Home
+          </a>
+          <a href="#" class="block py-2 px-4 text-gray-600 hover:bg-gray-100 rounded-md">
+            Analytics
+          </a>
+          <a href="#" class="block py-2 px-4 text-gray-600 hover:bg-gray-100 rounded-md">
+            Settings
+          </a>
+          <a href="#" class="block py-2 px-4 text-gray-600 hover:bg-gray-100 rounded-md">
+            Logout
+          </a>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="flex-1 flex flex-col">
+      <!-- Navbar -->
+      <header class="w-full bg-white shadow-md p-4">
+        <div class="flex justify-between items-center">
+          <h1 class="text-xl font-semibold">Welcome, User</h1>
+          <button class="shad-ui-button">Profile</button>
+        </div>
+      </header>
+
+      <!-- Main Section -->
+      <main class="flex-1 p-6 space-y-6">
+        <!-- Hero Section -->
+        <div class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white p-8 rounded-lg">
+          <h2 class="text-3xl font-bold">Dashboard Overview</h2>
+          <p class="mt-2">This is your admin dashboard. Here you can manage everything in one place.</p>
+          <button class="shad-ui-button mt-4 bg-white text-indigo-600">Get Started</button>
+        </div>
+
+        <!-- Stats Grid -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-xl font-semibold text-gray-800">Users</h3>
+            <p class="mt-2 text-2xl font-bold">1,245</p>
+            <p class="text-gray-500">Total registered users</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-xl font-semibold text-gray-800">Sales</h3>
+            <p class="mt-2 text-2xl font-bold">$34,245</p>
+            <p class="text-gray-500">Monthly revenue</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-xl font-semibold text-gray-800">Active Sessions</h3>
+            <p class="mt-2 text-2xl font-bold">345</p>
+            <p class="text-gray-500">Users online right now</p>
+          </div>
+        </section>
+
+        <!-- Recent Activity Section -->
+        <section class="bg-white p-6 rounded-lg shadow-lg">
+          <h2 class="text-xl font-semibold text-gray-8 00">Recent Activity</h2>
+          <div class="mt-4 space-y-4">
+            <div class="flex justify-between items-center border-b border-gray-200 pb-2">
+              <p class="text-gray-600">User John Doe updated his profile</p>
+              <p class="text-sm text-gray-400">2 hours ago</p>
+            </div>
+            <div class="flex justify-between items-center border-b border-gray-200 pb-2">
+              <p class="text-gray-600">New user registered: Jane Smith</p>
+              <p class="text-sm text-gray-400">5 hours ago</p>
+            </div>
+            <div class="flex justify-between items-center">
+              <p class="text-gray-600">Sale completed by Alan Brown</p>
+              <p class="text-sm text-gray-400">1 day ago</p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <!-- Shadcn UI JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@shadcn/ui@latest/dist/shad-ui.js"></script>
+</body>
+</html>

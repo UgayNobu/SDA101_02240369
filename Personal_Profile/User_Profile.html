@@ -1,0 +1,250 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal Resume Website of [Your Name]">
+  <title>[UGAY] | Portfolio & Resume</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Georgia&display=swap" rel="stylesheet">
+  
+  
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background-color: #fff;
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    .main-header {
+      background-color: #1a73e8;
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+    }
+
+    .main-header h1 {
+      font-size: 2.5rem;
+    }
+
+    .main-header p {
+      font-size: 1.25rem;
+    }
+
+    .nav-bar ul {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .nav-bar a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .section {
+      padding: 50px 0;
+    }
+
+    #about p {
+      font-family: 'Georgia', serif;
+      font-size: 1.2rem;
+    }
+
+    #skills ul {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    #skills ul li {
+      background-color: #f0f0f0;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-size: 1.1rem;
+    }
+
+    .portfolio-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .portfolio-item {
+      width: calc(50% - 10px);
+      text-align: center;
+    }
+
+    .portfolio-item img {
+      max-width: 100%;
+      border-radius: 5px;
+    }
+
+    .portfolio-item p {
+      margin-top: 10px;
+      font-size: 1rem;
+    }
+
+    .main-footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+
+    @media (max-width: 768px) {
+      .container {
+        width: 90%;
+      }
+
+      .portfolio-item {
+        width: 100%;
+      }
+
+      .nav-bar ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      #skills ul {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .main-header {
+        padding: 1.5rem 0;
+      }
+
+      .section {
+        padding: 30px 0;
+      }
+
+      form input, form textarea {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="main-header">
+    <div class="container">
+      <h1>[UGYEN NORBU]</h1>
+      <p>Web Developer | Designer | Programmer</p>
+      <nav class="nav-bar">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#" id="toggle-dark-mode">Dark Mode</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>I am a web developer with a passion for creating beautiful, functional websites. With skills in both front-end and back-end technologies, I am focused on delivering optimal user experiences.</p>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <div class="container">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML & CSS</li>
+        <li>JavaScript</li>
+        <li>React & Vue.js</li>
+        <li>Responsive Design</li>
+        <li>Back-End Technologies</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="portfolio" class="section">
+    <div class="container">
+      <h2>Portfolio</h2>
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <img src="project1.jpg" alt="Project 1" loading="lazy">
+          <p>Project 1 Description</p>
+        </div>
+        <div class="portfolio-item">
+          <img src="project2.jpg" alt="Project 2" loading="lazy">
+          <p>Project 2 Description</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form action="submit_form.php" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </div>
+
+  </section>
+
+
+  <footer class="main-footer">
+    <div class="container">
+      <p>© 2024 [UGYEN]. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

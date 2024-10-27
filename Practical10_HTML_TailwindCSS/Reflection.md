@@ -20,7 +20,5 @@ Challenges Faced
 Making It Responsive: Initially, the page didn’t resize well on smaller screens. It took me a bit of trial and error to get it right, but using Tailwind’s responsive classes fixed the issue.
 Hover Effect: At first, the hover effect on the button was too sudden. I used Tailwind’s transition utilities to make the change smoother.
 
-(c) Clarity & Coherence
 
-Overall, this project gave me hands-on experience with creating a clean and responsive design. It was challenging at times, but I’m happy with the result and feel more confident in my front-end skills now.
 

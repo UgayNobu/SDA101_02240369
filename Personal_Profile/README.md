@@ -1,0 +1,1 @@
+https://www.figma.com/design/jbbRMrv7NwAXWjr89IFcMa/my-profile-page?node-id=0-1&t=DvsxLdJ5fMyxNPTR-1

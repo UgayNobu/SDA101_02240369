@@ -13,7 +13,3 @@ I realized how important it is to balance large amounts of content with a clean 
 
 Challenges and Solutions
 The biggest challenge was managing all the different content sections without making the interface look crowded. I fixed this by adjusting the spacing and layout of each section, and testing the design on different devices to make sure it looked good everywhere.
-
-(c) Clarity & Coherence
-
-Throughout the process, I focused on keeping the design consistent and easy to navigate. By organizing the content clearly, I was able to create a layout that feels smooth and intuitive for users.

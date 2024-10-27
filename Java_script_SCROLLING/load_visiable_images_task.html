@@ -1,0 +1,88 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazy Load Images</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        img {
+            display: block;
+            margin: 20px auto;
+            background-color: #f0f0f0; /* Placeholder background */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Placeholder images with real image paths in data-src -->
+<img src="/Practical9_HTML_Simple_Landing_Page/images/WhatsApp Image 2024-10-08 at 13.32.10 (1).jpeg" width="128" height="128" data-src="real1.jpg" alt="Lazy Image 1">
+<img src="/Practical9_HTML_Simple_Landing_Page/images/WhatsApp Image 2024-10-08 at 13.32.10 (2).jpeg" width="128" height="128" data-src="real2.jpg" alt="Lazy Image 2">
+<img src="/Practical9_HTML_Simple_Landing_Page/images/WhatsApp Image 2024-10-08 at 13.32.10 (3).jpeg" width="128" height="128" data-src="real3.jpg" alt="Lazy Image 3">
+<img src="/Practical9_HTML_Simple_Landing_Page/images/WhatsApp Image 2024-10-08 at 13.32.10 (4).jpeg" width="128" height="128" data-src="real4.jpg" alt="Lazy Image 4">
+<img src="/Practical9_HTML_Simple_Landing_Page/images/WhatsApp Image 2024-10-08 at 13.32.10 (4).jpeg" width="128" height="128" data-src="real5.jpg" alt="Lazy Image 5">
+
+<!-- Regular images without data-src should load normally -->
+<img src="normal1.jpg" width="128" height="128" alt="Regular Image 1">
+<img src="normal2.jpg" width="128" height="128" alt="Regular Image 2">
+
+<script>
+    // Function to check if the element is in the viewport
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top <= window.innerHeight && rect.bottom >= 0
+        );
+    }
+
+    // Function to load the real image
+    function loadRealImage(image) {
+        if (image.dataset.src && !image.dataset.loaded) {
+            image.src = image.dataset.src;
+            image.dataset.loaded = true;  // Mark as loaded
+        }
+    }
+
+    // Function to preload images that are one screen below the viewport
+    function preloadNextImages() {
+        const images = document.querySelectorAll('img[data-src]');
+        images.forEach(image => {
+            const rect = image.getBoundingClientRect();
+            if (rect.top <= window.innerHeight * 2) {  // One screen height below
+                loadRealImage(image);
+            }
+        });
+    }
+
+    // Function to lazy load images
+    function lazyLoadImages() {
+        const images = document.querySelectorAll('img[data-src]');
+        images.forEach(image => {
+            if (isInViewport(image)) {
+                loadRealImage(image);
+            }
+        });
+        preloadNextImages();  // Preload images below the current viewport
+    }
+
+    // Initial check when the page loads
+    window.addEventListener('DOMContentLoaded', () => {
+        lazyLoadImages();
+    });
+
+    // On scroll, check and load images in the viewport
+    window.addEventListener('scroll', () => {
+        lazyLoadImages();
+    });
+
+    // On resize, re-check the viewport for images to load
+    window.addEventListener('resize', () => {
+        lazyLoadImages();
+    });
+</script>
+
+</body>
+</html>

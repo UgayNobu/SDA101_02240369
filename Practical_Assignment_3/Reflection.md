@@ -16,7 +16,3 @@ One of the big challenges was setting up TailwindCSS properly. I ran into an iss
 
 Here's a screenshot of the error I encountered during the process:
 Making the layout fully responsive was also a bit tricky. I had to tweak the grid and flex settings to make sure the design looked good on different screen sizes, but Tailwind made it easier to adjust things quickly.
-
-(c) Clarity & Coherence
-
-I’ve tried to keep this reflection clear and straightforward, summarizing the key things I worked on, what I learned, and the challenges I faced. Hopefully, it provides a good overview of my thought process and approach to the assignment.

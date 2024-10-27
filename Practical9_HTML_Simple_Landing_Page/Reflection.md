@@ -14,7 +14,5 @@ I learned how to design a simple, visually appealing landing page, and I now hav
 Challenges Faced and Overcoming Them
 At first, I had trouble spacing the product cards evenly (see screenshot), but I fixed it by tweaking the CSS grid settings. I also had to figure out how to make the page look good on different screen sizes, which I managed by adjusting the layout with CSS.
 
-(c) Clarity & Coherence
 
-I’ve kept this reflection simple and clear, making it easy to understand what I did, learned, and the challenges I faced.
 

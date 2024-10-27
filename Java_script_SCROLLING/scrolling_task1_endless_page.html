@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endless Scroll with Date-Time</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-y: scroll;
+            scroll-behavior: smooth;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .entry {
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div id="content">
+        <div class="entry">Initial Entry - Page Loaded</div>
+    </div>
+</div>
+
+<script>
+    // Function to append current date-time to the page
+    function appendDateTime() {
+        const content = document.getElementById('content');
+        const entry = document.createElement('div');
+        entry.classList.add('entry');
+        
+        const currentDateTime = new Date().toLocaleString();
+        entry.textContent = 'Appended at: ' + currentDateTime;
+
+        content.appendChild(entry);
+    }
+
+    // Function to detect if we are near the bottom of the page
+    function isNearBottom() {
+        const scrollPosition = window.scrollY + window.innerHeight;
+        const threshold = document.body.offsetHeight - 100;  // 100px from the bottom
+        return scrollPosition >= threshold;
+    }
+
+    // Scroll event listener to trigger append when near the bottom
+    window.addEventListener('scroll', function() {
+        if (isNearBottom()) {
+            appendDateTime();
+        }
+    });
+
+    // Initial content padding to allow scrolling
+    for (let i = 0; i < 10; i++) {
+        appendDateTime();
+    }
+</script>
+
+</body>
+</html>

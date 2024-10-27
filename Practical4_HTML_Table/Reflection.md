@@ -10,9 +10,7 @@ What I Learned: This task helped me better understand how HTML tables work, espe
 
 Challenges Faced: The main challenge was making the "Lunch Break" span across the columns correctly. At first, the cells weren’t lining up as they should, and it took a bit of trial and error with colspan to fix it. Also, figuring out the right colors to use was a bit tricky, but after some testing, I found a color scheme that made the table easy to read.
 
-(c) Clarity & Coherence
 
-I tried to keep this reflection straightforward and easy to follow. I focused on explaining what I did, what I learned, and the challenges I faced in a simple, clear way.
 
 
 

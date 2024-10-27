@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll to Top Button</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .entry {
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+
+        /* To the Top Button Styling */
+        #toTopBtn {
+            position: fixed;
+            left: 20px;
+            top: 20px;
+            display: none;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        #toTopBtn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div id="content">
+        <div class="entry">Initial Entry - Page Loaded</div>
+    </div>
+</div>
+
+<!-- Scroll to Top Button -->
+<button id="toTopBtn">&#8679; Top</button>
+
+<script>
+// Function to append current date-time to the page
+function appendDateTime() {
+    const content = document.getElementById('content');
+    const entry = document.createElement('div');
+    entry.classList.add('entry');
+    
+    const currentDateTime = new Date().toLocaleString();
+    entry.textContent = 'Appended at: ' + currentDateTime;
+
+    content.appendChild(entry);
+}
+
+// Function to detect if we are near the bottom of the page
+function isNearBottom() {
+    const scrollPosition = window.scrollY + window.innerHeight;
+    const threshold = document.body.offsetHeight - 100;  // 100px from the bottom
+    return scrollPosition >= threshold;
+}
+
+// Scroll event listener to trigger append when near the bottom
+window.addEventListener('scroll', function() {
+    if (isNearBottom()) {
+        appendDateTime();
+    }
+
+    // Check if we should show or hide the "to the top" button
+    toggleToTopButton();
+});
+
+// Function to toggle the "to the top" button
+function toggleToTopButton() {
+    const toTopBtn = document.getElementById('toTopBtn');
+    if (window.scrollY > window.innerHeight) {
+        toTopBtn.style.display = 'block';
+    } else {
+        toTopBtn.style.display = 'none';
+    }
+}
+
+// Scroll to the top when the button is clicked
+document.getElementById('toTopBtn').addEventListener('click', function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+// Initial content padding to allow scrolling
+for (let i = 0; i < 10; i++) {
+    appendDateTime();
+}
+</script>
+
+</body>
+</html>

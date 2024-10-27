@@ -10,6 +10,3 @@ What I Learned: I learned how to structure and design a form using HTML that’s
 
 Challenges Faced: The biggest challenge was getting all the form elements to line up properly since, at first, they looked messy. I fixed this by tweaking the CSS for better spacing. There was also an issue with the date input field not showing up correctly in some browsers, but after some research, I found a way to handle it by testing on different platforms.
 
-(c) Clarity & Coherence
-
-I kept this reflection straightforward, explaining what I did, what I learned, and the problems I faced. It’s organized in a way that should be easy to follow.

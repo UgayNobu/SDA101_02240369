@@ -14,3 +14,6 @@ I realized the importance of simplicity in designing user authentication. It’s
 Challenges and Solutions
 One of the main challenges was keeping the interface clean and user-friendly, especially with multiple login options. I dealt with this by testing the design across devices and tweaking it based on feedback from users, ensuring it was simple and responsive.
 
+(c) Clarity & Coherence
+
+Throughout the project, I made sure everything stayed organized and easy to follow. I broke down the steps in the user flow, so it was clear how users would interact with each part of the design. Keeping things simple and focused on user needs was key in making sure everything worked smoothly.

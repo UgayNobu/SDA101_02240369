@@ -16,6 +16,3 @@ I learned how useful it is to break down content into clear sections. For exampl
 Challenges and Solutions
 The biggest challenge was making sure everything stayed clear and didn’t get overwhelming. I solved this by using bullet points and numbered lists, which helped organize the information better.
 
-(c) Clarity & Coherence
-
-The page turned out clean and easy to follow. The headings and lists made it simple to navigate, and the information was laid out in a way that made sense without being too complicated.

@@ -14,7 +14,5 @@ This exercise gave me a good understanding of how to create tables in HTML and s
 Challenges Faced and Overcoming Them
 I had trouble aligning the columns in the table at first (see screenshot). To fix this, I adjusted the column widths and added some padding using CSS. I also experimented with font sizes and colors to make the title stand out more.
 
-(c) Clarity & Coherence
 
-I kept my writing simple and organized, making it easy to understand what I did, what I learned, and the challenges I faced.
 

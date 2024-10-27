@@ -14,6 +14,3 @@ This task gave me a better understanding of how HTML forms work. It was my first
 Challenges Faced and Overcoming Them
 I struggled a bit with getting the form elements, like the radio buttons and dropdowns, to align properly. It looked messy at first (see the screenshot). To fix this, I used CSS to adjust the margins and padding, which helped align the fields better. Another challenge was making sure the fields only accepted the correct data types, but I solved this by using the right input types (like email and date).
 
-(c) Clarity & Coherence
-
-I tried to keep my reflection clear and straightforward, explaining the main concepts, what I learned, and the challenges I faced in a logical way.

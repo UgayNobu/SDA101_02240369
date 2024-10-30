@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom User Profile Element</title>
+</head>
+<body>
+
+<user-profile name="John Doe" role="Administrator"></user-profile>
+
+<script>
+class UserProfile extends HTMLElement {
+    constructor() {
+        super();
+        this.attachShadow({ mode: 'open' }).innerHTML = `
+            <style>
+                .profile-card { border: 1px solid #ccc; border-radius: 8px; padding: 16px; width: 200px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); font-family: Arial, sans-serif; }
+                .name { font-size: 18px; font-weight: bold; margin-bottom: 8px; }
+                .role { font-size: 14px; color: #555; }
+            </style>
+            <div class="profile-card">
+                <div class="name"></div>
+                <div class="role"></div>
+            </div>
+        `;
+    }
+
+    connectedCallback() {
+        this.shadowRoot.querySelector('.name').textContent = this.getAttribute('name');
+        this.shadowRoot.querySelector('.role').textContent = this.getAttribute('role');
+    }
+}
+
+customElements.define('user-profile', UserProfile);
+</script>
+
+</body>
+</html>

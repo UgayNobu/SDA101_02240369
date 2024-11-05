@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reusable Card Component with Random Dog Image</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background-color: #f0f2f5;
+    }
+
+    my-card {
+      --card-background: #ffffff;
+      --card-border-radius: 8px;
+      --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      --header-bg: #007bff;
+      --header-color: #ffffff;
+      --footer-bg: #f1f1f1;
+      width: 320px; /* Fixed width for the card */
+      max-width: 100%; /* Make responsive on smaller screens */
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <my-card>
+    <div slot="header">Card Header</div>
+    <div slot="content">
+      <p>This is the main content of the card. It can contain text, images, or other HTML elements.</p>
+      <!-- Placeholder for the random dog image -->
+      <img id="dog-image" src="" alt="Random Dog Image" style="width: 100%; height: auto; border-radius: 8px;">
+    </div>
+    <div slot="footer">Card Footer</div>
+  </my-card>
+
+  <script>
+    class MyCard extends HTMLElement {
+      constructor() {
+        super();
+        this.attachShadow({ mode: "open" });
+
+        this.shadowRoot.innerHTML = `
+          <style>
+            :host {
+              display: block;
+              background: var(--card-background, #ffffff);
+              border-radius: var(--card-border-radius, 10px);
+              box-shadow: var(--card-shadow, 0 4px 8px rgba(0, 0, 0, 0.2));
+              overflow: hidden;
+              font-family: Arial, sans-serif;
+              width: 100%;
+              max-width: 320px;
+              box-sizing: border-box;
+            }
+
+            ::slotted([slot="header"]) {
+              background: var(--header-bg, #007bff);
+              color: var(--header-color, #ffffff);
+              padding: 1rem;
+              font-size: 1.2rem;
+              font-weight: bold;
+              text-align: center;
+              border-top-left-radius: var(--card-border-radius, 10px);
+              border-top-right-radius: var(--card-border-radius, 10px);
+            }
+
+            ::slotted([slot="content"]) {
+              padding: 1rem;
+              color: var(--content-color, #333);
+            }
+
+            ::slotted([slot="content"]) img {
+              width: 100%; /* Full width of the slot */
+              height: auto; /* Maintain aspect ratio */
+              border-radius: 8px; /* Smooth corners */
+              margin-top: 8px;
+            }
+
+            ::slotted([slot="footer"]) {
+              background: var(--footer-bg, #f1f1f1);
+              padding: 1rem;
+              text-align: center;
+              color: var(--footer-color, #666);
+              border-bottom-left-radius: var(--card-border-radius, 10px);
+              border-bottom-right-radius: var(--card-border-radius, 10px);
+            }
+          </style>
+
+          <slot name="header"></slot>
+          <slot name="content"></slot>
+          <slot name="footer"></slot>
+        `;
+      }
+    }
+
+    customElements.define("my-card", MyCard);
+
+    // Fetch a random dog image and display it
+    fetch('https://dog.ceo/api/breeds/image/random')
+      .then(response => response.json())
+      .then(data => {
+        const dogImage = document.getElementById('dog-image');
+        dogImage.src = data.message;
+      })
+      .catch(error => {
+        console.error('Error fetching dog image:', error);
+      });
+  </script>
+</body>
+</html>
